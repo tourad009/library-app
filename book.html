@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library App</title>
+    <link rel="stylesheet" href="book.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="mini-logo"><path d="M12 21.5C10.65 20.65 8.2 20 6.5 20C4.85 20 3.15 20.3 1.75 21.05C1.65 21.1 1.6 21.1 1.5 21.1C1.25 21.1 1 20.85 1 20.6V6C1.6 5.55 2.25 5.25 3 5C4.11 4.65 5.33 4.5 6.5 4.5C8.45 4.5 10.55 4.9 12 6C13.45 4.9 15.55 4.5 17.5 4.5C18.67 4.5 19.89 4.65 21 5C21.75 5.25 22.4 5.55 23 6V20.6C23 20.85 22.75 21.1 22.5 21.1C22.4 21.1 22.35 21.1 22.25 21.05C20.85 20.3 19.15 20 17.5 20C15.8 20 13.35 20.65 12 21.5M11 7.5C9.64 6.9 7.84 6.5 6.5 6.5C5.3 6.5 4.1 6.65 3 7V18.5C4.1 18.15 5.3 18 6.5 18C7.84 18 9.64 18.4 11 19V7.5M13 19C14.36 18.4 16.16 18 17.5 18C18.7 18 19.9 18.15 21 18.5V7C19.9 6.65 18.7 6.5 17.5 6.5C16.16 6.5 14.36 6.9 13 7.5V19Z" /></svg>
+            <h2>Library App</h2>
+        </div>
+        <button class="add-book">New Book</button>
+    </div>
+    <main>
+        <div class="no-book">
+            <img src="no-book-background.jpg" alt="">
+            <p>Click on the "New Book" button to add a book.</p>
+        </div>
+        <table class="library">
+            <thead>
+                <tr>
+                    <th width="20%">Title</th>
+                    <th width="20%">Author</th>
+                    <th width="20%">Pages</th>
+                    <th width="30%">Read Status</th>
+                    <th width="10%"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Les livres seront ajoutés ici -->
+            </tbody>
+        </table>
+
+        <dialog class="form-dialog">
+            <div class="wrapper">
+                <form action="">
+                    <h2 class="form-title">Book Informations</h2>
+                    <div class="fields">
+                        <input type="text" placeholder="Author" class="field-element">
+                        <input type="text" placeholder="Title" class="field-element">
+                        <input type="tel" placeholder="Pages" class="field-element">
+                    </div>
+                    <div class="read-state-container">
+                        <input type="radio" name="read-state" id="read" value="read" checked>
+                        <label for="read">Read</label>
+                        <input type="radio" name="read-state" id="not-read" value="not-read">
+                        <label for="not-read">Not read yet</label>
+                    </div>
+                    <div class="warning-container">
+                        <p class="warning-msg" style="display:none;">The fields should not be empty.</p>
+                    </div>
+                    <div class="buttons">
+                        <button type="submit" class="validate-btn">Validate</button>
+                        <button type="button" class="cancel-btn">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </dialog>
+        
+    </main>
+    <script src="book.js"></script>
+</body>
+</html>
